@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36077EE91EAF475F00AFD14D /* SoundManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36077EE81EAF475F00AFD14D /* SoundManage.swift */; };
 		AF1CD98E1E2D92AE00FC9AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */; };
 		AF1CD9901E2D92AE00FC9AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */; };
 		AF1CD9931E2D92AE00FC9AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1CD9911E2D92AE00FC9AAE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36077EE81EAF475F00AFD14D /* SoundManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManage.swift; sourceTree = "<group>"; };
 		AF1CD98A1E2D92AE00FC9AAE /* High Rise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High Rise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; wrapsLines = 1; };
@@ -64,11 +66,12 @@
 				AF1CD99F1E2D92E300FC9AAE /* HighRise.scnassets */,
 				AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */,
 				AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */,
+				36077EE81EAF475F00AFD14D /* SoundManage.swift */,
+				AF1CD9A11E2DC4E500FC9AAE /* SCNVector3 Extensions.swift */,
 				AF1CD9911E2D92AE00FC9AAE /* Main.storyboard */,
 				AF1CD9941E2D92AE00FC9AAE /* Assets.xcassets */,
 				AF1CD9961E2D92AE00FC9AAE /* LaunchScreen.storyboard */,
 				AF1CD9991E2D92AE00FC9AAE /* Info.plist */,
-				AF1CD9A11E2DC4E500FC9AAE /* SCNVector3 Extensions.swift */,
 			);
 			path = "High Rise";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				AF1CD9901E2D92AE00FC9AAE /* ViewController.swift in Sources */,
 				AF1CD9A21E2DC4E500FC9AAE /* SCNVector3 Extensions.swift in Sources */,
+				36077EE91EAF475F00AFD14D /* SoundManage.swift in Sources */,
 				AF1CD98E1E2D92AE00FC9AAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

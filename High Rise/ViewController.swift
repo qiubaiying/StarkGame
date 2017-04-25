@@ -24,6 +24,7 @@ import UIKit
 import SceneKit
 import SpriteKit
 
+
 class ViewController: UIViewController {
   
   // MARK: - IBOutlet
@@ -58,7 +59,9 @@ class ViewController: UIViewController {
   // perfectMatches记录完全匹配的次数
   var perfectMatches = 0
   
-  var sounds = [String: SCNAudioSource]()
+  /// 音效
+//  var sounds = [String: SCNAudioSource]()
+  let soundManage: SoundManage = SoundManage()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,27 +73,7 @@ class ViewController: UIViewController {
     scnView.isPlaying = true
     scnView.delegate = self
     
-    // 加载音效
-    loadSound(name: "GameOver", path: "HighRise.scnassets/Audio/GameOver.wav")
-    loadSound(name: "PerfectFit", path: "HighRise.scnassets/Audio/PerfectFit.wav")
-    loadSound(name: "SliceBlock", path: "HighRise.scnassets/Audio/SliceBlock.wav")
-
     
-  }
-  
-  // MARK:- Sound
-  
-  func loadSound(name: String, path: String) {
-    if let sound = SCNAudioSource(fileNamed: path) {
-      sound.isPositional = false
-      sound.volume = 1
-      sound.load()
-      sounds[name] = sound
-    }
-  }
-  
-  func playSound(sound: String, node: SCNNode) {
-    node.runAction(SCNAction.playAudio(sounds[sound]!, waitForCompletion: false))
   }
   
   override var prefersStatusBarHidden: Bool {
@@ -154,13 +137,15 @@ class ViewController: UIViewController {
       // Game Over
       if height % 2 == 0 && newSize.z <= 0 {
         gameOver()
-        playSound(sound: "GameOver", node: currentBoxNode)
+
+        soundManage.playGameOverSound(node: currentBoxNode)
         height += 1
         currentBoxNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: currentBoxNode.geometry!, options: nil))
         return
       } else if height % 2 != 0 && newSize.x <= 0 {
         gameOver()
-        playSound(sound: "GameOver", node: currentBoxNode)
+
+        soundManage.playGameOverSound(node: currentBoxNode)
         height += 1
         currentBoxNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: currentBoxNode.geometry!, options: nil))
         return
@@ -210,7 +195,7 @@ class ViewController: UIViewController {
     }
     
     scnScene.rootNode.addChildNode(newBoxNode)
-    playSound(sound: "SliceBlock", node: currentBoxNode)
+    soundManage.playSliceBlockSound(node: currentBoxNode)
   }
   
   /// 添加掉落的块
@@ -280,7 +265,7 @@ class ViewController: UIViewController {
       absoluteOffset = offset.absoluteValue()
       newSize = currentSize - absoluteOffset
       
-      playSound(sound: "PerfectFit", node: currentBoxNode)
+      soundManage.playPerfectFitSound(node: currentBoxNode)
       
     } else if height % 2 != 0 && absoluteOffset.x <= 0.03 {
       
@@ -296,7 +281,7 @@ class ViewController: UIViewController {
       absoluteOffset = offset.absoluteValue()
       newSize = currentSize - absoluteOffset
       
-      playSound(sound: "PerfectFit", node: currentBoxNode)
+      soundManage.playPerfectFitSound(node: currentBoxNode)
       
     } else {
       perfectMatches = 0
@@ -305,12 +290,12 @@ class ViewController: UIViewController {
   }
   
   func gameOver() {
-    let mainCamera = scnScene.rootNode.childNode(
-      withName: "Main Camera", recursively: false)!
+    
+    let mainCamera = scnScene.rootNode.childNode(withName: "Main Camera", recursively: false)!
     
     let fullAction = SCNAction.customAction(duration: 0.3) { _,_ in
       let moveAction = SCNAction.move(to: SCNVector3Make(mainCamera.position.x,
-                                                         mainCamera.position.y * (3/4), mainCamera.position.z), duration: 0.3)
+                                                         mainCamera.position.y * 0.9, mainCamera.position.z), duration: 0.3)
       mainCamera.runAction(moveAction)
       if self.height <= 15 {
         mainCamera.camera?.orthographicScale = 1
