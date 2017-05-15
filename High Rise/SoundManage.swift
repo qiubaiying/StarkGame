@@ -14,7 +14,6 @@ class SoundManage: NSObject {
     
     var sounds = [String: SCNAudioSource]()
     
-    
     override init() {
         super.init()
         // 加载音效

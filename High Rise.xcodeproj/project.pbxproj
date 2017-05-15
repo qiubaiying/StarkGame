@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		36077EE91EAF475F00AFD14D /* SoundManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36077EE81EAF475F00AFD14D /* SoundManage.swift */; };
+		3657D6321EC9A2A700475E9A /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657D6311EC9A2A700475E9A /* IBDesignableView.swift */; };
+		366B108C1EB075720057A569 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10731EB075720057A569 /* Chameleon_.m */; };
+		366B108D1EB075720057A569 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10751EB075720057A569 /* ChameleonConstants.m */; };
+		366B108E1EB075720057A569 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10791EB075720057A569 /* NSArray+Chameleon.m */; };
+		366B108F1EB075720057A569 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B107B1EB075720057A569 /* UIAppearance+Swift.m */; };
+		366B10901EB075720057A569 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B107D1EB075720057A569 /* UIButton+Chameleon.m */; };
+		366B10911EB075720057A569 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B107F1EB075720057A569 /* UIColor+Chameleon.m */; };
+		366B10921EB075720057A569 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10811EB075720057A569 /* UIColor+ChameleonPrivate.m */; };
+		366B10931EB075720057A569 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10831EB075720057A569 /* UIImage+ChameleonPrivate.m */; };
+		366B10941EB075720057A569 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10851EB075720057A569 /* UILabel+Chameleon.m */; };
+		366B10951EB075720057A569 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10871EB075720057A569 /* UINavigationController+Chameleon.m */; };
+		366B10961EB075720057A569 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B10891EB075720057A569 /* UIView+ChameleonPrivate.m */; };
+		366B10971EB075720057A569 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 366B108B1EB075720057A569 /* UIViewController+Chameleon.m */; };
+		366B109C1EB0943E0057A569 /* UIColor+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B109B1EB0943E0057A569 /* UIColor+Extenions.swift */; };
 		AF1CD98E1E2D92AE00FC9AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */; };
 		AF1CD9901E2D92AE00FC9AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */; };
 		AF1CD9931E2D92AE00FC9AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1CD9911E2D92AE00FC9AAE /* Main.storyboard */; };
@@ -20,6 +34,36 @@
 
 /* Begin PBXFileReference section */
 		36077EE81EAF475F00AFD14D /* SoundManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManage.swift; sourceTree = "<group>"; };
+		3657D6311EC9A2A700475E9A /* IBDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
+		366B10711EB075720057A569 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		366B10721EB075720057A569 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
+		366B10731EB075720057A569 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
+		366B10741EB075720057A569 /* ChameleonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonConstants.h; sourceTree = "<group>"; };
+		366B10751EB075720057A569 /* ChameleonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonConstants.m; sourceTree = "<group>"; };
+		366B10761EB075720057A569 /* ChameleonEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonEnums.h; sourceTree = "<group>"; };
+		366B10771EB075720057A569 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
+		366B10781EB075720057A569 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		366B10791EB075720057A569 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		366B107A1EB075720057A569 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		366B107B1EB075720057A569 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		366B107C1EB075720057A569 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		366B107D1EB075720057A569 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		366B107E1EB075720057A569 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		366B107F1EB075720057A569 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		366B10801EB075720057A569 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		366B10811EB075720057A569 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		366B10821EB075720057A569 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		366B10831EB075720057A569 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		366B10841EB075720057A569 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		366B10851EB075720057A569 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		366B10861EB075720057A569 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		366B10871EB075720057A569 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		366B10881EB075720057A569 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		366B10891EB075720057A569 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		366B108A1EB075720057A569 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		366B108B1EB075720057A569 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		366B109A1EB0788E0057A569 /* HighRise-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HighRise-Bridging-Header.h"; sourceTree = "<group>"; };
+		366B109B1EB0943E0057A569 /* UIColor+Extenions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extenions.swift"; sourceTree = "<group>"; };
 		AF1CD98A1E2D92AE00FC9AAE /* High Rise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "High Rise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; wrapsLines = 1; };
@@ -43,6 +87,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366B10701EB075720057A569 /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				366B10711EB075720057A569 /* Chameleon.h */,
+				366B10721EB075720057A569 /* Chameleon_.h */,
+				366B10731EB075720057A569 /* Chameleon_.m */,
+				366B10741EB075720057A569 /* ChameleonConstants.h */,
+				366B10751EB075720057A569 /* ChameleonConstants.m */,
+				366B10761EB075720057A569 /* ChameleonEnums.h */,
+				366B10771EB075720057A569 /* ChameleonMacros.h */,
+				366B10781EB075720057A569 /* NSArray+Chameleon.h */,
+				366B10791EB075720057A569 /* NSArray+Chameleon.m */,
+				366B107A1EB075720057A569 /* UIAppearance+Swift.h */,
+				366B107B1EB075720057A569 /* UIAppearance+Swift.m */,
+				366B107C1EB075720057A569 /* UIButton+Chameleon.h */,
+				366B107D1EB075720057A569 /* UIButton+Chameleon.m */,
+				366B107E1EB075720057A569 /* UIColor+Chameleon.h */,
+				366B107F1EB075720057A569 /* UIColor+Chameleon.m */,
+				366B10801EB075720057A569 /* UIColor+ChameleonPrivate.h */,
+				366B10811EB075720057A569 /* UIColor+ChameleonPrivate.m */,
+				366B10821EB075720057A569 /* UIImage+ChameleonPrivate.h */,
+				366B10831EB075720057A569 /* UIImage+ChameleonPrivate.m */,
+				366B10841EB075720057A569 /* UILabel+Chameleon.h */,
+				366B10851EB075720057A569 /* UILabel+Chameleon.m */,
+				366B10861EB075720057A569 /* UINavigationController+Chameleon.h */,
+				366B10871EB075720057A569 /* UINavigationController+Chameleon.m */,
+				366B10881EB075720057A569 /* UIView+ChameleonPrivate.h */,
+				366B10891EB075720057A569 /* UIView+ChameleonPrivate.m */,
+				366B108A1EB075720057A569 /* UIViewController+Chameleon.h */,
+				366B108B1EB075720057A569 /* UIViewController+Chameleon.m */,
+			);
+			path = Chameleon;
+			sourceTree = "<group>";
+		};
 		AF1CD9811E2D92AD00FC9AAE = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +141,19 @@
 			isa = PBXGroup;
 			children = (
 				AF51DC031E4FB55800FF75BD /* Gradient.png */,
-				AF1CD99F1E2D92E300FC9AAE /* HighRise.scnassets */,
 				AF1CD98D1E2D92AE00FC9AAE /* AppDelegate.swift */,
 				AF1CD98F1E2D92AE00FC9AAE /* ViewController.swift */,
+				366B109B1EB0943E0057A569 /* UIColor+Extenions.swift */,
 				36077EE81EAF475F00AFD14D /* SoundManage.swift */,
 				AF1CD9A11E2DC4E500FC9AAE /* SCNVector3 Extensions.swift */,
+				3657D6311EC9A2A700475E9A /* IBDesignableView.swift */,
+				366B10701EB075720057A569 /* Chameleon */,
 				AF1CD9911E2D92AE00FC9AAE /* Main.storyboard */,
+				AF1CD99F1E2D92E300FC9AAE /* HighRise.scnassets */,
 				AF1CD9941E2D92AE00FC9AAE /* Assets.xcassets */,
 				AF1CD9961E2D92AE00FC9AAE /* LaunchScreen.storyboard */,
 				AF1CD9991E2D92AE00FC9AAE /* Info.plist */,
+				366B109A1EB0788E0057A569 /* HighRise-Bridging-Header.h */,
 			);
 			path = "High Rise";
 			sourceTree = "<group>";
@@ -151,10 +233,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366B108D1EB075720057A569 /* ChameleonConstants.m in Sources */,
+				3657D6321EC9A2A700475E9A /* IBDesignableView.swift in Sources */,
+				366B108C1EB075720057A569 /* Chameleon_.m in Sources */,
+				366B10961EB075720057A569 /* UIView+ChameleonPrivate.m in Sources */,
+				366B10921EB075720057A569 /* UIColor+ChameleonPrivate.m in Sources */,
 				AF1CD9901E2D92AE00FC9AAE /* ViewController.swift in Sources */,
+				366B10951EB075720057A569 /* UINavigationController+Chameleon.m in Sources */,
+				366B10941EB075720057A569 /* UILabel+Chameleon.m in Sources */,
 				AF1CD9A21E2DC4E500FC9AAE /* SCNVector3 Extensions.swift in Sources */,
+				366B109C1EB0943E0057A569 /* UIColor+Extenions.swift in Sources */,
+				366B10911EB075720057A569 /* UIColor+Chameleon.m in Sources */,
 				36077EE91EAF475F00AFD14D /* SoundManage.swift in Sources */,
+				366B108F1EB075720057A569 /* UIAppearance+Swift.m in Sources */,
+				366B10971EB075720057A569 /* UIViewController+Chameleon.m in Sources */,
+				366B10931EB075720057A569 /* UIImage+ChameleonPrivate.m in Sources */,
 				AF1CD98E1E2D92AE00FC9AAE /* AppDelegate.swift in Sources */,
+				366B10901EB075720057A569 /* UIButton+Chameleon.m in Sources */,
+				366B108E1EB075720057A569 /* NSArray+Chameleon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.qiubaiying.StackGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/High Rise/HighRise-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -299,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.qiubaiying.StackGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/High Rise/HighRise-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

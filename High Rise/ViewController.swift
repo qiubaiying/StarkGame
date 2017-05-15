@@ -60,8 +60,14 @@ class ViewController: UIViewController {
   var perfectMatches = 0
   
   /// 音效
-//  var sounds = [String: SCNAudioSource]()
-  let soundManage: SoundManage = SoundManage()
+  lazy var soundManage: SoundManage = SoundManage()
+  
+		
+  
+  /// Color
+  var previousColor = UIColor()
+  var currentColor = UIColor()
+		
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -72,6 +78,8 @@ class ViewController: UIViewController {
     
     scnView.isPlaying = true
     scnView.delegate = self
+    
+
     
     
   }
@@ -107,9 +115,9 @@ class ViewController: UIViewController {
         let boxNode = SCNNode(geometry: SCNBox(width: 1, height: 0.2, length: 1, chamferRadius: 0))
         boxNode.position.z = -1.25
         boxNode.position.y = 0.1
-        boxNode.name = "Block\(height)"
-        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor(colorLiteralRed: 0.01 * Float(height),
-                                                                    green: 0, blue: 1, alpha: 1)
+        boxNode.name = blockNodeName
+        //boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor(colorLiteralRed: 0.01 * Float(height), green: 0, blue: 1, alpha: 1)
+        boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.randomFlat
         scnScene.rootNode.addChildNode(boxNode)
         
     }
@@ -120,6 +128,7 @@ class ViewController: UIViewController {
     
     // 获取当前的 BoxNod 进行处理
     if let currentBoxNode = scnScene.rootNode.childNode(withName: blockNodeName, recursively: false) {
+      
       currentPosition = currentBoxNode.presentation.position
       let boundsMin = currentBoxNode.boundingBox.min
       let boundsMax = currentBoxNode.boundingBox.max
@@ -129,10 +138,6 @@ class ViewController: UIViewController {
       absoluteOffset = offset.absoluteValue()
       newSize = currentSize - absoluteOffset
       
-      
-      offset = previousPosition - currentPosition
-      absoluteOffset = offset.absoluteValue()
-      newSize = currentSize - absoluteOffset
       
       // Game Over
       if height % 2 == 0 && newSize.z <= 0 {
@@ -151,7 +156,7 @@ class ViewController: UIViewController {
         return
       }
       
-      // 完美匹配
+      // perfect Matches
       checkPerfectMatch(currentBoxNode)
       
       currentBoxNode.geometry = SCNBox(width: CGFloat(newSize.x), height: 0.2, length: CGFloat(newSize.z), chamferRadius: 0)
@@ -186,7 +191,7 @@ class ViewController: UIViewController {
     let newBoxNode = SCNNode(geometry: currentBoxNode.geometry)
     newBoxNode.position = SCNVector3Make(currentBoxNode.position.x, currentBoxNode.position.y + 0.2, currentBoxNode.position.z)
     newBoxNode.name = "Block\(height + 1)"
-    newBoxNode.geometry?.firstMaterial?.diffuse.contents = UIColor(colorLiteralRed: 0.01 * Float(height), green: 0, blue: 1, alpha: 1)
+    newBoxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.randomFlat
     
     if height % 2 == 0 {
       newBoxNode.position.x = -1.25
@@ -221,7 +226,7 @@ class ViewController: UIViewController {
       //
       brokenBoxNode.physicsBody = SCNPhysicsBody(type: .dynamic,
                                                  shape: SCNPhysicsShape(geometry: brokenBoxNode.geometry!, options: nil))
-      brokenBoxNode.geometry?.firstMaterial?.diffuse.contents = UIColor(colorLiteralRed: 0.01 * Float(height), green: 0, blue: 1, alpha: 1)
+      brokenBoxNode.geometry?.firstMaterial?.diffuse.contents = currentBoxNode.geometry?.firstMaterial?.diffuse.contents
       scnScene.rootNode.addChildNode(brokenBoxNode)
       
       
@@ -241,8 +246,7 @@ class ViewController: UIViewController {
       
       brokenBoxNode.physicsBody = SCNPhysicsBody(type: .dynamic,
                                                  shape: SCNPhysicsShape(geometry: brokenBoxNode.geometry!, options: nil))
-      brokenBoxNode.geometry?.firstMaterial?.diffuse.contents = UIColor(
-        colorLiteralRed: 0.01 * Float(height), green: 0, blue: 1, alpha: 1)
+      brokenBoxNode.geometry?.firstMaterial?.diffuse.contents = currentBoxNode.geometry?.firstMaterial?.diffuse.contents
       scnScene.rootNode.addChildNode(brokenBoxNode)
       
     }
