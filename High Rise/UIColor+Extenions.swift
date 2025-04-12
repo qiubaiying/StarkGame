@@ -11,7 +11,7 @@ import Foundation
 extension Chameleon {
 
     var newColor: UIColor {
-        return .randomFlat
+        return .randomFlat()
     }
     
     class func gitRGB(_ color: UIColor) -> (CGFloat, CGFloat, CGFloat) {
